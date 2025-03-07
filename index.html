@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="w-full h-screen">
+    <div class="container w- 1/2 h-full flex items-center justify-center flex-col ">
+        <img class="w-3/2 h-5/6 "
+            src="https://imgs.search.brave.com/YvTisMojt77uI352tmS8fhF_vfsBL_SGXaeqgZpb_sc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTg1/MjA2OTU4L3Bob3Rv/L2xpZ2h0LWJ1bGIu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PXVmZjMxQ2Y1UXkw/UnNzMk9CdzdhT3lz/dm9ERVZLSlZrNTNQ/ckxmekdwQkk9"
+            alt="">
+        <button class="font-black border-2 border-black p-2 rounded-xl ">Turn On</button>
+    </div>
+    <script>
+        const button = document.querySelector('.border-2.border-black.p-2.rounded-xl');
+        count = 0;
+
+        button.addEventListener('click', () => {
+            if (count === 0) {
+                const img = document.querySelector('img');
+                button.innerHTML = "Turn Off";
+                img.src = "https://imgs.search.brave.com/fzNNRw0XWZ39gKEEo5utDMvKnfyTi4rah-tvxaC4KEM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2xpZ2h0LWJ1/bGItcG5nLWxpZ2h0/LWJ1bGItcG5nLWZp/bGUtcG5nLWltYWdl/LTEyMDAucG5n"
+
+                count++;
+            }
+            else {
+                const img = document.querySelector('img');
+                button.innerHTML = "Turn on";
+                img.src = "https://imgs.search.brave.com/YvTisMojt77uI352tmS8fhF_vfsBL_SGXaeqgZpb_sc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTg1/MjA2OTU4L3Bob3Rv/L2xpZ2h0LWJ1bGIu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PXVmZjMxQ2Y1UXkw/UnNzMk9CdzdhT3lz/dm9ERVZLSlZrNTNQ/ckxmekdwQkk9"
+
+                count--;
+            }
+        }
+        )
+
+    </script>
+</body>
+</html>
